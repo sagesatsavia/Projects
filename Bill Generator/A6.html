@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            height: 400px;
+            width: 800px;
+            background-color: rgb(252, 247, 240);
+        }
+        .label{
+            margin-left: 50px;
+            font-size: 20px;
+        }
+        .label2{
+            margin-left: 100px;
+            font-size: 20px;
+        }
+        .p1{
+            margin-left: 30px;
+            margin-top: 10px;
+            height: 30px;
+            text-align: center;
+        }
+        .buttondiv{
+            height: 50px;
+            width: 150px;
+            font-size: 20px;
+            margin-top: 50px;
+            margin-left: 250px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <label class="label">item 1</label>
+        <input class="p1" type="text" id="item1">
+        <label class="label2" >Add price</label>
+        <input class="p1" type="text" id="price1">
+        
+        <br><label class="label" >item 2</label>
+        <input class="p1" type="text" id="item2">
+        <label class="label2">Add price</label>
+        <input class="p1" type="text" id="price2">
+        
+        <br><label class="label">item 3</label>
+        <input class="p1" type="text" id="item3">
+        <label class="label2">Add price</label>
+        <input class="p1" type="text" id="price3">
+        <div>
+            <button class="buttondiv" onclick="generate()">Generate</button>
+        </div>
+        <div class="show" id="show"></div>
+    </div>
+    <script>
+        function generate() {
+            var item1= document.getElementById ("item1").value
+            var item2= document.getElementById ("item2").value
+            var item3= document.getElementById ("item3").value
+            var price1= document.getElementById ("price1").value
+            var price2= document.getElementById ("price2").value
+            var price3= document.getElementById ("price3").value
+            var total = Number(price1) + Number(price2) + Number(price3);
+            console.log("Item 1",item1,"price is: ",price1);
+            console.log("Item 2",item2,"price is: ",price2);
+            console.log("Item 3",item3,"price is: ",price3);
+            
+            document.getElementById("show").innerHTML = "Item 1 " + item1 + " price is: " + price1 + "<br>" +  "Item 2 " + item2 + " price is: " + price2 + "<br>" + "Item 3 " + item3 + " price is: " + price3 + "<br>" + "The Total Price is: " + total;  
+        }
+
+
+
+    </script>
+</body>
+</html>
