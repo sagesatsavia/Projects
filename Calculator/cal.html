@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="maindiv">
+        <div class="insidediv">
+            
+            <div class="viewnum" id="shownum"> </div>
+           
+            <div class="line1">
+                <button class="button1line1"  id="clear" onclick="clear1()">CLEAR</button>
+                <button class="buttonsline1"  id="dot" onclick="calculate('.')"> . </button>
+                <button class="buttonsline1"  id="divide"  onclick="calculate('%')"> % </button>
+            </div>
+
+            <div class="line2">
+                <button class="buttonsline2"  id="seven" onclick="calculate('7')"> 7 </button>
+                <button class="buttonsline2"  id="eight"  onclick="calculate('8')"> 8 </button>
+                <button class="buttonsline2"  id="nine"  onclick="calculate('9')"> 9 </button>
+                <button class="buttonsyellow"  id="multi"  onclick="calculate('*')"> * </button>
+            </div>
+
+            <div class="line2">
+                <button class="buttonsline2"  id="four"  onclick="calculate('4')"> 4 </button>
+                <button class="buttonsline2"  id="five"  onclick="calculate('5')"> 5 </button>
+                <button class="buttonsline2"  id="six"  onclick="calculate('6')"> 6 </button>
+                <button class="buttonsyellow"  id="minus" onclick="calculate('-')"> - </button>
+            </div>
+
+            <div class="line2">
+                <button class="buttonsline2"  id="one" onclick="calculate('1')"> 1 </button>
+                <button class="buttonsline2"  id="two" onclick="calculate('2')"> 2 </button>
+                <button class="buttonsline2"  id="three"  onclick="calculate('3')"> 3 </button>
+                <button class="buttonsyellow"  id="plus" onclick="calculate('+')"> + </button>
+            </div>
+
+            <div class="line2">
+                <button class="buttonsline2"  id="twozero"  onclick="calculate('00')"> 00 </button>
+                <button class="buttonsline2"  id="zero" value="0" onclick="calculate('0')"> 0 </button>
+                <button class="eq"  id="eq" onclick="final()"> = </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function clear1(){
+            document.getElementById("shownum").innerText = " ";
+            
+        }
+        function multi(x,y){
+            return x * y;
+        }
+        function minus(x,y){
+            return x - y;
+        }
+        function plus(x,y){
+            return x + y;
+        }
+        function divide(x,x){
+            return x % x;
+        }
+        
+        function calculate(x){
+            document.getElementById("shownum").innerText += x ;
+
+        }
+        function final(){
+            var finalvalue = document.getElementById("shownum").innerHTML;
+            console.log(finalvalue)
+            document.getElementById("shownum").innerHTML = eval(finalvalue)
+        }
+         
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+    </script>
+    
+</body>
+</html>
