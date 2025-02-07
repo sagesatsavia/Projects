@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 style="text-align: center; margin-top: 100px;">Customize a DIV</h1>
+    
+
+    <h3 style="text-align: center;">Enter Color : <input type="text" id="colortext" placeholder="Enter Color"> </h3> 
+    <h3 style="text-align: center;">Enter Height : <input type="text" id="heighttext" placeholder="Enter Height"> </h3> 
+    <h3 style="text-align: center;">Enter Width : <input type="text" id="widthtext" placeholder="Enter Width"> </h3> 
+    <h3 style="text-align: center;">Enter Border : <input type="text" id="bordertext" placeholder="Enter Border"> </h3> 
+    <h3 style="text-align: center;">Enter Border : <input type="text" id="margintext" placeholder="Enter margin"> </h3> 
+    <button style=" height:40px; background-color: beige; border: 1px solid beige; font-size: 20px; margin-left: 44%;" onclick="customize () ">CUSTOMIZE NOW!</button>
+
+
+    <div id="div1"></div>
+
+    <script>
+
+        function customize(){
+            var color= document.getElementById ("colortext").value
+            var height= document.getElementById ("heighttext").value
+            var width= document.getElementById ("widthtext").value
+            var border= document.getElementById ("bordertext").value
+            var margin= document.getElementById ("margintext").value
+
+
+            document.getElementById("div1").style.backgroundColor= color;
+            document.getElementById("div1").style.height= height;
+            document.getElementById("div1").style.width= width;
+            document.getElementById("div1").style.border= border;
+            document.getElementById("div1").style.marginTop= margin;
+
+            
+
+
+
+
+
+
+
+        }
+
+    </script>
+</body>
+</html>
